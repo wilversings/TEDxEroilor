@@ -1,0 +1,22 @@
+
+.item-menu li {
+    
+    padding: 8px 12px;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    
+}
+
+.item-menu li:hover {
+    
+    background-color: #B5EDFF;
+    
+}
+
+.item-menu a {
+    color: black;
+    text-decoration: none;
+}
+.item-menu a:hover {
+    background-color:transparent;
+}

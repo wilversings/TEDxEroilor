@@ -1,0 +1,87 @@
+
+
+/*
+| Speaker board
+*/
+
+.speaker-board {
+    height:500px;
+    padding:0;
+    margin-top:30px;
+}
+
+.speaker-board-image {
+
+    background: linear-gradient(
+        to right,
+        rgba(0, 173, 181, 0.5),
+        rgba(68, 14, 98, 0.5)
+    ), 
+    url(gfx/elonmusk.jpg);
+    background-size: auto 500px;
+
+    -webkit-filter: brightness(50%) grayscale(15%); 
+    -moz-filter: brightness(50%) grayscale(15%);
+    -ms-filter: brightness(50%) grayscale(15%);
+    -o-filter: brightness(50%) grayscale(15%);
+    filter: brightness(50%) grayscale(15%);
+    
+    position:absolute;
+    width:inherit;
+    height:inherit;
+    z-index:-1;
+
+}
+
+.speaker-board-content {
+    position:absolute;
+    bottom:80px;
+    left:50px;
+}
+
+.speaker-board h3 {
+    font-family: 'Open Sans';
+    font-weight: 600;
+    color:white;
+}
+
+.speaker-board h1 {
+    font-family: PlayfairDisplay-Black;
+    color: white;
+    width: 600px;
+    font-size: 3.8em;
+}
+
+.speaker-board p {
+    font-family: 'Open Sans';
+    color: white;
+    width: 420px;
+    margin: 25px 0;
+}
+
+.speaker-board button {
+    outline: none;
+    width: 180px;
+    height: 60px;
+    border-radius: 50px;
+    background-color: transparent;
+    font-family: Roboto-Black;
+    color: white;
+    border-color: white;
+    border: solid;
+}
+.speaker-board button:hover {
+    color:grey;
+}
+
+/*
+|   Speaker list
+*/
+
+.speaker-photo {
+    height:240px;
+    width:240px;
+    background-size: auto inherit;
+    background-repeat: no-repeat;
+    background-position: center;
+}

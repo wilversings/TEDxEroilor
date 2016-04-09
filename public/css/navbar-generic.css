@@ -1,0 +1,75 @@
+body {
+    padding-top:100px;
+    color:black;
+}
+.navbar-nav li a,
+.navbar-brand {
+    line-height: 98px;
+    height: 98px;
+    padding-top: 0;
+}
+.navbar-brand img {
+    padding: 25px 0;
+}
+.navbar-nav a {
+    font-family: 'Open Sans';
+}
+
+
+.ted {
+    font-weight: bold;
+    color:red;
+    font-family: 'Open Sans';
+    font-weight: 800;
+}
+.x {
+  position: relative;
+  bottom: 3px; 
+  font-size:90%;
+}
+.main-navbar {
+    background-color:white;
+border-bottom:solid 1px;
+}
+
+.social-icons a img {
+    margin-right: 20px;
+}
+.social-icons {
+    margin: 0 20px 0 15px;
+}
+
+.navbar-underscore {
+    margin-top:-3px !important;
+    height:4px !important;
+    z-index:1;
+    transition: margin-left 0.5s, width 0.5s;
+}
+.navbar-toggle {
+    margin-top:31px;
+    border: solid 1px;
+    border-color: black !important;
+}
+
+/*
+|   Media queries
+*/
+
+@media(max-width:768px){
+    
+    .navbar-underscore {
+        display:none;
+    }
+    .navbar-nav li a {
+        line-height: 60px;
+        height: 40px;
+    }
+    
+}
+@media(max-width:992px){
+    .social-fetch div {
+    margin-top:25px;
+}
+}
+@media(max-width:1200px){
+}

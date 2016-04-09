@@ -1,0 +1,109 @@
+
+
+.about-header {
+    margin-top: 30px;
+    width: inherit;
+    overflow:hidden;
+}
+
+.left-text {
+    height: 500px;
+}
+
+.about-background {
+    width: inherit;
+    height: 500px;
+    position: absolute;
+
+    -webkit-filter: brightness(25%) grayscale(90%);
+    -moz-filter: brightness(25%) grayscale(90%);
+    -ms-filter: brightness(25%) grayscale(90%);
+    -o-filter: brightness(25%) grayscale(90%);
+    filter: brightness(25%) grayscale(90%);
+
+    background-image: url(../gfx/elonmusk.jpg);
+    z-index: -1;
+}
+.about-text {
+    color: white;
+    position:absolute;
+    bottom: 60px;
+    left: 30px;
+}
+.about-text h3 {
+    font-family: OpenSans-Semibold;
+}
+
+.about-text h1 {
+    margin-bottom: 35px;
+    font-size: 3.8em;
+    font-family: PlayfairDisplay-Black;
+}
+
+.about-text p {
+    line-height: 27px;
+    font-family: OpenSans-Regular;
+    max-width: 700px;
+}
+
+.about-text {
+    
+}
+
+.right-menu {
+    
+}
+.right-menu .row {
+    text-align: center;
+    color: white;
+    background-color:rgba(0, 0, 0, 0.85);
+    height:100px;
+    font-size: 1.6em;
+    line-height:95px;
+}
+.right-menu .active {
+    background-color:rgba(255, 10, 10, 8);
+}
+.right-menu .ted {
+    font-size: 2.1em;
+}
+
+.right-menu a {
+    
+    text-decoration:none;
+    
+}
+
+.right-menu a:hover div {
+    transition: background-color 0.2s;
+}
+
+.right-menu a:hover div {
+    background-color:rgba(56, 56, 56, 0.61);
+}
+
+.team {
+    //margin-top: 30px;
+}
+
+.member-photo {
+    -webkit-filter: saturate(175%);
+    filter: saturate(175%);
+    background-size:auto 240px;
+    background-position:center;
+    background-repeat: no-repeat;
+    width:240px;
+    height:240px;
+}
+
+@media(max-width:768px){
+    .left-text {
+        background-color:rgb(38,38,38);
+        padding:0;
+        
+    }
+    .about-text {
+        left:10px;
+    }
+    
+}

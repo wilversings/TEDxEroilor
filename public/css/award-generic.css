@@ -1,0 +1,117 @@
+
+.award {
+    margin-top:75px;
+}
+
+/*
+|   Award left
+*/
+
+.award-left h1 {
+    font-size: 3.8em;
+    margin: 0;
+    font-family: PlayfairDisplay-Black;
+}
+
+.award-left p {
+    margin-top: 25px;
+    font-family: 'Open Sans';
+    font-size: 1.15em;
+}
+
+.award-left {
+    padding-right: 100px;
+}
+
+/*
+|   Award right
+*/
+
+.banner {
+    position:absolute;
+    right: 0;
+    top: 25px;
+}
+
+.award-right {
+    border-color: #ff2b06 !important;
+    border-left: solid 2px;
+    padding-bottom: 50px;
+    background-image: linear-gradient(to bottom right, transparent 40%, #fff8bd);
+}
+
+.award-bullet {
+    width:40px;
+    height:40px;
+    background-color: #ff2b06;
+    border-radius: 50px;
+    text-align: center;
+    color:white;
+    font-family: 'Open Sans';
+    font-weight:600;
+    font-size: 1.15em;
+    line-height: 40px;
+    margin-left:-21px;
+    float:left;
+    margin-right:25px;
+}
+
+.award-right .row {
+    margin-top:50px;
+}
+
+.award-step {
+    float:left;
+    font-family: 'Open Sans';
+    font-weight: 50;
+    width:80%;
+}
+
+.award-step b, .award-step span {
+    float:left;
+}
+
+
+/*
+|   Modal
+*/
+
+.modal-dialog, .modal-content {
+    width: 433px;
+    padding:10px 15px;
+}
+
+.modal-content {
+    border-radius: 0 !important;
+}
+
+.modal-title {
+    font-family: 'Open Sans';
+    font-weight: 600;
+}
+.modal-header h2 {
+    margin-top: 15px;
+    font-size:3em;
+}
+
+.modal-body input {
+    width: 365px;
+    height: 45px;
+    font-family: 'Open Sans';
+    font-size: 1.2em;
+    margin-top: 20px;
+    border: solid 1px;
+    border-color: #e3e3e3;
+    padding-left:25px;
+}
+
+@media(max-width:768px){
+    .award-right {
+        margin-top:70px;
+        margin-left:30px;
+    }
+    .banner {
+        position:absolute;
+        bottom:0;
+    }
+}

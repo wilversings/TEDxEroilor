@@ -1,0 +1,74 @@
+.x, .x2 {
+  position: relative;
+  bottom: 3px; 
+  font-size:90%;
+}
+.x2 {
+    bottom: 12px;
+    font-size:75%;
+}
+.red_, .black_, .white_ {
+  position: absolute;
+  width: 54px;
+  height: 3px;
+  margin: 5px 0;
+}
+
+.black_ {
+  background-color: black;
+}
+.red_ {
+    background-color: rgb(255, 43, 6);
+}
+.white_ {
+    background-color: white;
+}
+
+.tedx-button {
+    border: 0;
+    background: rgb(255,43,6);
+    background: -moz-linear-gradient(-45deg,  rgba(255,43,6,1) 0%, rgba(255,78,11,1) 62%, rgba(255,78,11,1) 62%, rgba(255,78,11,1) 74%);
+    background: -webkit-linear-gradient(-45deg,  rgba(255,43,6,1) 0%,rgba(255,78,11,1) 62%,rgba(255,78,11,1) 62%,rgba(255,78,11,1) 74%);
+    background: linear-gradient(135deg,  rgba(255,43,6,1) 0%,rgba(255,78,11,1) 62%,rgba(255,78,11,1) 62%,rgba(255,78,11,1) 74%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2b06', endColorstr='#ff4e0b',GradientType=1 );
+    font-family: Roboto-Black;
+    color: white;
+    width: 162px;
+    height: 57px;
+}
+
+.banner {
+
+    background-repeat:no-repeat;
+    background-image: url(../gfx/fancy_button.png);
+    height:56px;
+    width: 335px;
+    margin-left:-85px;
+    padding: 17px 25px;
+    text-align:right;
+    font-family: 'Open Sans';
+    font-weight: 600;
+
+}
+
+blockquote {
+    border-left-color: red;
+    border-left-width:3px;
+    font-size:1em;
+    height:40px;
+    padding:0 0 0 15px;
+    margin-top:20px;
+}
+
+.partners {
+    
+    margin: 75px 25px;
+    
+}
+
+.partners img {
+    
+    height: 150px;
+    margin: 0 50px 0 0;
+    
+}
