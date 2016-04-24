@@ -33,13 +33,14 @@
     <script src="{{ URL::to ('/') }}/scripts/navbar.js"></script>
     <script src="{{ URL::to ('/') }}/scripts/home.js"></script>
 
-    <title>TEDxEroilor | Home</title>
+    <title>TEDxEroilor | @yield('title') </title>
 
     <style>
     </style>
 
     <script>
-
+        window.underscore_offset = {0: 0, 1: 69.671875, 2: 171.46875, 3: 260.96875, 4: 412.015625, 5: 492.234375, 6: 578};
+        @yield('script')
     </script>
 
 </head>

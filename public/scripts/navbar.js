@@ -1,25 +1,26 @@
 $(function () {
     
-    var underscore_offset = {
-        0: 0,
-        1: 0,
-        2: 0,
-        3: 0,
-        4: 0,
-        5: 0
-    };
+    var uo = window.underscore_offset;
 
-    for (var i = 1; i <= 5; ++i) {
-        underscore_offset[i] = underscore_offset[i - 1] + $("#" + (i - 1)).outerWidth() + 6;
-    }
+    var underscore = $(".navbar-underscore"),
+        elem = window.underscore_element;
 
+    underscore.css("margin-left", uo[elem]);
+    underscore.css("width", uo[elem + 1] - uo[elem]);
+    
     $(".navbar-button").hover(function () {
         
-        var underscore = $(".navbar-underscore");
+        underscore.addClass("navbar-underscore-slide");
         var id = $(this).attr("id");
-        underscore.css("margin-left", underscore_offset[id]);
-        underscore.css("width", $(this).outerWidth());
+        underscore.css("margin-left", uo[id]);
+        underscore.css("width", $(this)[0].getBoundingClientRect().width);
 
-    })
+    }, function () {
+        
+        underscore.css("margin-left", uo[elem]);
+        underscore.css("width", uo[elem + 1] - uo[elem]);
+        
+    });
+    
 
-})
+});

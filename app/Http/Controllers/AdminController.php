@@ -157,8 +157,12 @@ class AdminController extends Controller {
     public function modifyAdvisers (Request $request) {
         
         $fields = $request->all();
+        unset ($fields['photo']);
+        $id = App\Services\Admin::saveRequest(App\Adviser::class, $fields);
         
-        App\Services\Admin::saveRequest(App\Adviser::class, $fields);
+        if (Input::hasFile('photo')) {
+            Input::file('photo')->move('advisers_img', $id);
+        }
         
         return redirect()->back();
         
@@ -461,10 +465,14 @@ class AdminController extends Controller {
     public function modifyAlumni (Request $request) {
         
         $fields = $request->all();
+        unset($fields['photo']);
+        $id = App\Services\Admin::saveRequest(App\Alumna::class, $fields);
         
-        App\Services\Admin::saveRequest(App\Alumna::class, $fields);
+        if (Input::hasFile('photo')) {
+            Input::file('photo')->move('alumni_img', $id);
+        }
         
-        return redirect()-back();
+        return redirect('administration-dashboard/alumni/');
         
     }
     

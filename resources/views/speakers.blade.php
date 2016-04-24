@@ -1,6 +1,14 @@
 ﻿
 @extends('navbar')
 
+@section('title')
+Speakers
+@endsection
+
+@section('script')
+window.underscore_element = 2;
+@endsection
+
 @section('content')
 
     <div class="container">

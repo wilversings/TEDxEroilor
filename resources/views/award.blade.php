@@ -1,4 +1,13 @@
 @extends('navbar')
+
+@section('title')
+Award
+@endsection
+
+@section('script')
+window.underscore_element = 3;
+@endsection
+
 @section('content')
 <div id="apply" class="modal fade" role="dialog">
         <div class="modal-dialog">
@@ -53,7 +62,7 @@
 
             <div class="col-md-6 award-right">
 
-                <a href="#">
+                <a href="{{URL::to('/partners')}}">
                     <div class="banner">
                         {{strtoupper(trans('strings.right_banner'))}}
                     </div>

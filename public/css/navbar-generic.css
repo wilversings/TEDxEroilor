@@ -43,6 +43,8 @@ border-bottom:solid 1px;
     margin-top:-3px !important;
     height:4px !important;
     z-index:1;
+}
+.navbar-underscore-slide {
     transition: margin-left 0.5s, width 0.5s;
 }
 .navbar-toggle {

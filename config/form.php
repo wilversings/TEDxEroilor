@@ -77,6 +77,10 @@ return [
                "description_ro" => [
                    "type"  => "text",
                    "label" => "Description ro"
+               ],
+               "photo" => [
+                   'type' => 'image',
+                   'label' => 'Photo'
                ]
            ],
            "title"    => "Add a new Adviser",
@@ -223,6 +227,10 @@ return [
                "position_ro" => [
                    "type"  => "string",
                    "label" => "Position ro"
+               ],
+               'photo' => [
+                   "type" => "image",
+                   "label" => "Photo"
                ]
            ],
            "title"    => "Add a new Alumna",

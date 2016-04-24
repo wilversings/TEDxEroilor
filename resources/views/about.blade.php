@@ -1,5 +1,13 @@
 @extends('navbar')
 
+@section('title')
+About
+@endsection
+
+@section('script')
+window.underscore_element = 1;
+@endsection
+
 @section('content')
     <div class="container">
         <div class="about-header">
@@ -53,7 +61,7 @@
                 @foreach($data as $entry)
                 
                     <div class="col-md-3 team">
-                    <div class="member-photo" style="background-image:url(team_img/{{$entry['id']}})"></div>
+                    <div class="member-photo" style="background-image:url(../teammembers_img/{{$entry['id']}})"></div>
                     <blockquote style="height:60px">
                         <b>{{$entry['name']}}</b><br />
                         {{$entry['position']}}<br />
@@ -68,7 +76,7 @@
                 @foreach($data as $entry)
                 
                     <div class="col-md-3 team">
-                    <div class="member-photo" style="background-image:url(members_img/{{$entry['id']}})"></div>
+                    <div class="member-photo" style="background-image:url(../alumni_img/{{$entry['id']}})"></div>
                     <blockquote style="height:40px">
                         <b>{{$entry['name']}}</b><br />
                         {{$entry['position']}}<br />
@@ -82,7 +90,7 @@
                 @foreach($data as $entry)
                 
                     <div class="col-md-3 team">
-                    <div class="member-photo" style="background-image:url(members/{{$entry['id']}})"></div>
+                    <div class="member-photo" style="background-image:url(../advisers_img/{{$entry['id']}})"></div>
                     <blockquote style="height:40px">
                         <b>{{$entry['name']}}</b><br />
                         {{$entry['position']}}<br />

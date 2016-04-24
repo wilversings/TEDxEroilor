@@ -1,5 +1,13 @@
 @extends('navbar')
 
+@section('title')
+Partners
+@endsection
+
+@section('script')
+window.underscore_element = 5;
+@endsection
+
 @section('content')
 
 <div class="container">

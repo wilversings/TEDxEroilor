@@ -1,5 +1,13 @@
 @extends('navbar')
 
+@section('title')
+Contact
+@endsection
+
+@section('script')
+window.underscore_element = 4;
+@endsection
+
 @section('content')
     <div class="container">
         <div class="row">
@@ -16,6 +24,10 @@
                             @endforeach
                         @endforeach
                         </ul>
+                    @endif
+                    
+                    @if(isset($valMessage))
+                        <h4 style = "color:green;margin:20px 0 10px 20px;font-size:1.5em"> {{ trans("strings.$valMessage") }} </h4>
                     @endif
                     
                     <form class="contact-form" method = "post" action = "{{URL::to('/')}}/contact/post">

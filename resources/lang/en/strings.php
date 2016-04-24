@@ -70,6 +70,7 @@ return [
         'Cluj-Napoca', 
         'Strada Henri-Barbusse 59-61',
     ],
+    'contact_entry_accepted' => 'Formularul a fost inregistrat',
     
     // Award
     'left_top_title' => 'TEDxEroilor Award',

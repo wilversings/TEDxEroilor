@@ -32,7 +32,9 @@ class ContactController extends Controller {
         
         $newEntry->save();
         
-        return redirect()->back();
+        return view('contact')->with ([
+            'valMessage' => 'contact_entry_accepted'
+        ]);
         
     }
 
