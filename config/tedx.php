@@ -8,6 +8,7 @@ return [
     
     'twitter_token' => "",
     
-    'contact_email' => "contact@tedxeroilor.com"
+    'contact_email_from' => "contactform@tedxeroilor.com",
+    'contact_email_to' => "contact@tedxeroilor.com"
 
 ];

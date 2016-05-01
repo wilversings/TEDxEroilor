@@ -34,13 +34,13 @@ class ContactController extends Controller {
         
         $newEntry->save();
         
-        $emailBody = "Ai un nou mesaj de contact <br><br>" .
-                     "Nume: " . $newEntry->name . '<br>' .
-                     "Email: " . $newEntry->email . '<br>' .
-                     "Mesaj: " . $newEntry->message;
+        $emailBody = "Nume: " . $newEntry->name . '; ' .
+                     "Email: " . $newEntry->email . '; ' .
+                     "Mesaj: " . $newEntry->message . '; ';
         
         Mail::raw($emailBody, function ($email) {
-            $email->to(Config::get('tedx.contact_email'))->subject('TEDxEroilor: New contact entry'); 
+            $email->to(Config::get('tedx.contact_email_to'))->subject('TEDxEroilor: New contact entry'); 
+            $email->from(Config::get('tedx.contact_email_from'));
         });
         
         return view('contact')->with ([
