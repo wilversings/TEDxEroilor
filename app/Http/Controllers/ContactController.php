@@ -40,7 +40,7 @@ class ContactController extends Controller {
                      "Mesaj: " . $newEntry->message;
         
         Mail::raw($emailBody, function ($email) {
-            $email->to(Config::get('contact_email'))->subject('TEDxEroilor: New contact entry'); 
+            $email->to(Config::get('tedx.contact_email'))->subject('TEDxEroilor: New contact entry'); 
         });
         
         return view('contact')->with ([
