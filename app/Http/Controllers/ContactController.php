@@ -6,6 +6,7 @@ use App;
 use Validator;
 use Illuminate\Http\Request;
 use Mail;
+use Config;
 
 class ContactController extends Controller {
 
