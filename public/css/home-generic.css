@@ -23,11 +23,11 @@
     width: 15px;
 }
 .social-fetch-icon-facebook{
-    background-image:url(gfx/facebook_color.png);
+    background-image:url(../gfx/facebook_color.png);
     
 }
 .social-fetch-icon-twitter{
-    background-image:url(gfx/twitter_color.png);
+    background-image:url(../gfx/twitter_color.png);
 }
 
 /*
