@@ -240,7 +240,7 @@ class AdminController extends Controller {
         $itemToModify->events()->attach($fields['event_id']);
         
         if (Input::hasFile('photo')) {
-            Input::file('photo')->move("speakers_img", $id);
+            Input::file('photo')->move("speakers_img", $itemToModify->id);
         }
         
         return redirect()->back();

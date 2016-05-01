@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class SpeakersController extends Controller {
 
-    public function index() {
+    public function index($id = null) {
         
         $nextEvent = App\Services\Data::getNextEvent ();
         
@@ -33,11 +33,22 @@ class SpeakersController extends Controller {
             }
             
         }
+        
+        try {
+            $currentSpeaker = $nextEvent->speakers()->find($id);
+            if ($currentSpeaker == null)
+                $currentSpeaker = $nextEvent->speakers()->first();
+        }
+        catch (Exception $ex) {
+            $currentSpeaker = $nextEvent->speakers()->first();
+        }
         //return $previousEventsSpeakers;
                 
-        $nextEvent['date'] = Carbon::parse($nextEvent['date'])->formatLocalized('%d %B %Y');
+        $currentSpeaker = $currentSpeaker['description_'.App::getLocale()];
+        $nextEvent['date'] = Carbon::parse($nextEvent['date'])->formatLocalized('%B %d, %Y');
 
         return view('speakers')->with(compact([
+            'currentSpeaker',
             'nextEvent',
             'nextEventSpeakers',
             'previousEventsSpeakers',

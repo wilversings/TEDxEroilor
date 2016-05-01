@@ -31,8 +31,22 @@ class HomeController extends Controller {
 	 *
 	 * @return Response
 	 */
+	 
+	private static function getFacebookLastPost () {
+		
+		$fbApiUrl = "https://graph.facebook.com/v2.6/TEDxEroilor/feed?limit=1&access_token=" .
+		"EAADBb4mzn18BAIGZCTZCmK32ZCBV55R2TDXdiPkzI2g4wPm15jq4xbNU1ZAoZAZA1ZAKzoZALcYNZCKdTIrTqyvnpVp7ZBFG1deGknf1f0VVEihZCxD7GExDRTQjwf1lZApopKG1ebnR5ZCOikaEDZBgKtSeoKRLr0LObVUJ8ZD";
+		
+		return json_decode(file_get_contents($fbApiUrl));
+		
+	}
+	 
 	public function home() {
         
+		//return HomeController::getFacebookLastPost();
+		
+		$fbPost = HomeController::getFacebookLastPost();
+		
         $nowDateTime = Carbon::now('Europe/Bucharest');
         $nowTime = $nowDateTime->toTimeString();
         $nowDate = $nowDateTime->toDateString();
@@ -52,6 +66,8 @@ class HomeController extends Controller {
             'daysLeft' => $daysLeft,
             'hoursLeft' => $hoursLeft,
             'event' => $nextEvent,
+			'fbDate' => Carbon::parse($fbPost->data[0]->created_time)->formatLocalized('%d %B %Y'),
+			'fbMessage' => $fbPost->data[0]->message
         ]);
         
 	}

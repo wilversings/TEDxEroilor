@@ -62,7 +62,7 @@
     </div>
 @else
 
-    <h2 style = "margin-top:120px"> There are no {{ $entityName }} </h2>
+    <h2 style = "margin-top:120px"> There is no {{ $entityName }} </h2>
     <h2 style = "margin-top:30px"> Why don't you <a href = "{{Request::url()}}/add">add</a> some?
     
 @endif

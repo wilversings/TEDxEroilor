@@ -24,7 +24,7 @@ Route::get('/about/alumni', 'AboutController@alumni');
 Route::get('/about/boa', 'AboutController@boa');
 
 // Speakers routes
-Route::get('/speakers', 'SpeakersController@index');
+Route::get('/speakers/{id?}', 'SpeakersController@index')->where('id', '[0-9]+');
 
 // Award routes
 Route::get('/award', 'AwardController@index');

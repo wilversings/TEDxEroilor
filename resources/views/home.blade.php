@@ -156,14 +156,12 @@ window.underscore_element = 0;
 
                         <div class="col-md-2 social-fetch-icon-facebook"></div>
                         <div class="col-md-10 social-fetch-head">
-                            Feb 11, 2016 {{ trans("strings.social_media_on") }} Facebook
+                            {{ $fbDate }} {{ trans("strings.social_media_on") }} Facebook
                         </div>
-
-                                    <span class="social-fetch-text">
-                                        Abia ținem pasul cu știrile despre Geta. O felicităm pentru încă un record mondial în alpinism, primul din 2016!
-                                    </span>
-
-                    </div>
+                            <span class="social-fetch-text">
+                                {{ $fbMessage }}
+                            </span>
+                         </div>
 
 
 
