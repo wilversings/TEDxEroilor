@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use App;
 use Validator;
 use Illuminate\Http\Request;
+use Mail;
 
 class ContactController extends Controller {
 
@@ -31,6 +32,15 @@ class ContactController extends Controller {
         $newEntry->message = $request->message;
         
         $newEntry->save();
+        
+        $emailBody = "Ai un nou mesaj de contact <br><br>" .
+                     "Nume: " . $newEntry->name . '<br>' .
+                     "Email: " . $newEntry->email . '<br>' .
+                     "Mesaj: " . $newEntry->message;
+        
+        Mail::raw($emailBody, function ($email) {
+            $email->to(Config::get('contact_email'))->subject('TEDxEroilor: New contact entry'); 
+        });
         
         return view('contact')->with ([
             'valMessage' => 'contact_entry_accepted'

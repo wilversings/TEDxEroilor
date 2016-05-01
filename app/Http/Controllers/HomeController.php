@@ -2,6 +2,7 @@
 
 use App;
 use Carbon\Carbon;
+use Config;
 
 class HomeController extends Controller {
 
@@ -34,8 +35,10 @@ class HomeController extends Controller {
 	 
 	private static function getFacebookLastPost () {
 		
-		$fbApiUrl = "https://graph.facebook.com/v2.6/TEDxEroilor/feed?limit=1&access_token=" .
-		"EAADBb4mzn18BAIGZCTZCmK32ZCBV55R2TDXdiPkzI2g4wPm15jq4xbNU1ZAoZAZA1ZAKzoZALcYNZCKdTIrTqyvnpVp7ZBFG1deGknf1f0VVEihZCxD7GExDRTQjwf1lZApopKG1ebnR5ZCOikaEDZBgKtSeoKRLr0LObVUJ8ZD";
+		$fbApiUrl = "https://graph.facebook.com/v2.6/" .
+		 			Config::get('tedx.facebook_pagename') .
+					"/feed?limit=1&access_token=" . 
+		  			Config::get('tedx.facebook_token');
 		
 		return json_decode(file_get_contents($fbApiUrl));
 		
