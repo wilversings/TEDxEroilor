@@ -117,13 +117,21 @@ window.underscore_element = 0;
 
             <div class="subscribe">
 
+                <!-- Begin MailChimp Signup Form -->
+
                 <h2 style="font-family:PlayfairDisplay-Black">{{ trans("strings.subscribe_form_title") }}</h2>
                 <p style="font-family:OpenSans-Regular">{{ trans("strings.subscribe_form_subtitle") }}</p>
-                <div class="subscribe-form">
-                    <input type="text" placeholder="{{ trans("strings.subscribe_form_email_placeholder") }}">
+                <form action="//tedxeroilor.us4.list-manage.com/subscribe/post?u=886959b5d711696097ada6951&amp;id=a4af1d48a0" method="post" name="mc-embedded-subscribe-form" class="subscribe-form" target="_blank" novalidate>
+   
+                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="{{ trans("strings.subscribe_form_email_placeholder") }}" required>
                     <span class="input-underscore"></span>
-                    <button>{{ strtoupper(trans("strings.subscribe_form_button")) }}</button>
-                </div>
+                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_886959b5d711696097ada6951_a4af1d48a0" tabindex="-1" value=""></div>
+                    <input type="submit" value="{{ strtoupper(trans("strings.subscribe_form_button")) }}" name="subscribe" class="subscribe-submit">
+                    
+                </form>
+
+                <!--End mc_embed_signup-->
 
             </div>
 
