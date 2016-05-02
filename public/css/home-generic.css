@@ -69,7 +69,7 @@
     transition: background-color 0.5s;
 }
 
-.subscribe-form button:hover {
+.subscribe-form .subscribe-submit:hover {
     background-color: #7DB1F0;
 }
 

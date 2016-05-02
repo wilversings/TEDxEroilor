@@ -86,8 +86,6 @@ class AdminController extends Controller {
     public function modifyEvents (Request $request) {
         
         $fields = $request->all();
-        $fields['location_ro'] = str_replace (PHP_EOL, '\\', $fields['location_ro']);
-        $fields['location_en'] = str_replace (PHP_EOL, '\\', $fields['location_en']);
         
         $fields['datetime'] = $fields['date'].' '.$fields['time'];
         unset($fields['date']);
@@ -115,7 +113,7 @@ class AdminController extends Controller {
         
         $itemToModify['date'] = substr($itemToModify['datetime'], 0, 10);
         $itemToModify['time'] = substr($itemToModify['datetime'], 11);
-        //return $config;
+        
         $config['values'] = $itemToModify;
         return view("admin.modify")->with($config);
        

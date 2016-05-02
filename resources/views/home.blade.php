@@ -53,7 +53,7 @@ $(function() {
                         <span style="font-family:Roboto-Black;font-size:1.6em">LEFT</span><br />
                     </div>
 
-                    @foreach(explode('\\', $event->location) as $locationRow)
+                    @foreach(explode(PHP_EOL, $event->location) as $locationRow)
                         <span style="font-family:OpenSans-Semibold">{{ $locationRow }}</span><br />
                     @endforeach
                     
