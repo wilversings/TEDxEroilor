@@ -125,9 +125,6 @@
     right:0px;
     z-index:-1;
 
-    -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-
     -webkit-filter: invert(100%);
     filter: invert(100%);
 

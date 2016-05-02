@@ -32,6 +32,7 @@
 
     <script src="{{ URL::to ('/') }}/scripts/navbar.js"></script>
     <script src="{{ URL::to ('/') }}/scripts/home.js"></script>
+    <script src="{{ URL::to ('/') }}/scripts/clip-path-polygon.min.js"></script>
 
     <title>TEDxEroilor | @yield('title') </title>
 

@@ -6,6 +6,14 @@ Home
 
 @section('script')
 window.underscore_element = 0;
+
+$(function() {
+    var points = [[100, 0], [0, 100], [100, 100]];
+    $('#event-right').clipPath(points, {
+        isPercentage: true
+    });
+});
+
 @endsection
 
 @section('content')
@@ -56,7 +64,7 @@ window.underscore_element = 0;
                 
             </div>
             
-            <div class="event-right" style="background-image:url(events_img/{{$event->id}})">
+            <div class="event-right" id="event-right" style="background-image:url(events_img/{{$event->id}})">
             </div>
         </div>
     </div>

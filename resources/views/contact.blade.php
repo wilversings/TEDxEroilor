@@ -6,6 +6,21 @@ Contact
 
 @section('script')
 window.underscore_element = 4;
+
+$(function() {
+    var pointsRightMap = [[0, 0], [100, 0], [20, 100], [0, 100]],
+        pointsRightPhoto = [[100, 100], [100, 0], [0, 100]];
+    
+    $('#right-map').clipPath(pointsRightMap, {
+        isPercentage: true
+    });
+    
+    $('#right-photo').clipPath(pointsRightPhoto, {
+        isPercentage: true
+    })
+    
+});
+
 @endsection
 
 @section('content')
@@ -58,10 +73,10 @@ window.underscore_element = 4;
                     </div>
                 </div>
                 
-                <div class="right-map" style="background-image:url(gfx/contact_map.png)">
+                <div class="right-map" id="right-map" style="background-image:url(gfx/contact_map.png)">
                 </div>
                 
-                <div class="right-photo" style="background-image:url(gfx/contact_photo.jpg)">
+                <div class="right-photo" id="right-photo" style="background-image:url(gfx/contact_photo.jpg)">
                 </div>
 
             </div>
