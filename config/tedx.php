@@ -8,6 +8,9 @@ return [
     // Pagina de facebook din care se iau ultimele postari de pe pagina home
     'facebook_pagename' => 'TEDxEroilor',
     
+    // Este limita cuvintelor din ultima postare de pe facebook
+    'facebook_word_excerpt' => 25,
+    
     'twitter_token' => "",
     
     // De la ce adresa de email vin mesajele de contact

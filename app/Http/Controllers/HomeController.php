@@ -70,7 +70,7 @@ class HomeController extends Controller {
             'hoursLeft' => $hoursLeft,
             'event' => $nextEvent,
 			'fbDate' => Carbon::parse($fbPost->data[0]->created_time)->formatLocalized('%d %B %Y'),
-			'fbMessage' => $fbPost->data[0]->message
+			'fbMessage' => App\Services\Data::excerpt($fbPost->data[0]->message, Config::get('tedx.facebook_word_excerpt'))
         ]);
         
 	}

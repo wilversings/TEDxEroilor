@@ -6,6 +6,13 @@ use App;
 
 class Data {
     
+        static function excerpt($text, $wordCount) {
+            
+            $words = explode (' ', $text, $wordCount);
+            return implode (' ', array_slice ($words, 0, count ($words) - 1)) . "...";
+            
+        }
+    
         static function getNextEvent () {
         
         $nowDateTime = Carbon::now('Europe/Bucharest');
