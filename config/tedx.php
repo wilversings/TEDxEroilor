@@ -3,11 +3,21 @@
 
 return [
 
+    // Iconitele de social media de sus. Se pot schimba ordinea, link-ul,
+    // sau adauga mai multe, atata timp cat exista iconita cu {{numele cheii}}.png in folder-ul
+    // public/gfx pentru poza icon-ului.
+    'social_icons' => [
+        'twitter' => '',
+        'facebook' => 'https://www.facebook.com/TEDxEroilor/?fref=ts',
+        'instagram' => '',
+    ],
+
+    // Social feed
     'facebook_token' => "EAADBb4mzn18BAIGZCTZCmK32ZCBV55R2TDXdiPkzI2g4wPm15jq4xbNU1ZAoZAZA1ZAKzoZALcYNZCKdTIrTqyvnpVp7ZBFG1deGknf1f0VVEihZCxD7GExDRTQjwf1lZApopKG1ebnR5ZCOikaEDZBgKtSeoKRLr0LObVUJ8ZD",
     
     // Pagina de facebook din care se iau ultimele postari de pe pagina home
     'facebook_pagename' => 'TEDxEroilor',
-    
+
     // Este limita cuvintelor din ultima postare de pe facebook
     'facebook_word_excerpt' => 25,
     

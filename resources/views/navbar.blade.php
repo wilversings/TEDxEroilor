@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='shortcut icon' type='image/x-icon' href='{{ URL::to("/") }}/gfx/favicon.ico' />
     <link rel="stylesheet" href="{{URL::to('/')}}/css/bootstrap.min.css">
     <script src="{{URL::to('/')}}/scripts/jquery.min.js"></script>
     <script src="{{URL::to('/')}}/scripts/bootstrap.min.js"></script>
@@ -69,9 +70,9 @@
                     </div></li>
                 <li><div class="social-icons">
 
-                        <a href="#"><img src="{{ URL::to ('/') }}/gfx/twitter.png"></a>
-                        <a href="#"><img src="{{ URL::to ('/') }}/gfx/facebook.png"></a>
-                        <a href="#"><img src="{{ URL::to ('/') }}/gfx/instagram.png"></a>
+                        @foreach (Config::get('tedx.social_icons') as $network => $url)
+                            <a href="{{ $url }}" target="_blank"><img src="{{ URL::to ('/') }}/gfx/{{ $network }}.png"></a>
+                        @endforeach
 
                     </div></li>
                 <li class="navbar-button" id="0"><a href="{{URL::to('/')}}">{{ trans("strings.home") }}</a><span class="red_ navbar-underscore" style="margin-top:-2px;"></span></li>
