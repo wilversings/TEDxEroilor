@@ -113,7 +113,8 @@ window.underscore_element = 0;
         <h3 style="padding:15px 0 50px 15px">Highlights<div class="red_"></div></h3>
 
         <div class="col-md-6" style="padding-right:30px;">
-            <iframe width="100%" height="200" src="https://www.youtube.com/embed/6r1c_DeK3m4" frameborder="0" allowfullscreen></iframe>
+            <iframe width="100%" height="250" src="http://www.youtube.com/embed/{{ Config::get('tedx.video_1') }}?controls=0&fs=0&iv_load_policy=3&rel=0&showinfo=0&theme=light&autohide=0&disablekb=1" frameborder="0">
+            </iframe>
 
             <div class="subscribe">
 
@@ -148,11 +149,11 @@ window.underscore_element = 0;
                             Feb 11, 2016 {{ trans("strings.social_media_on") }} Twitter
                         </div>
 
-                                    <span class="social-fetch-text">
-                                        RT @VernonLund:<br />@SiyandaWrites @TEDxAms Thank you Sinyanda.A great and inspiding Tedx. You revive ...
-                                    </span>
+                            <span class="social-fetch-text">
+                                RT @VernonLund:<br />@SiyandaWrites @TEDxAms Thank you Sinyanda.A great and inspiding Tedx. You revive ...
+                            </span>
 
-                    </div>
+                        </div>
                 </div> <!-- Twitter last post end -->
 
 
@@ -176,8 +177,8 @@ window.underscore_element = 0;
                 </div> <!-- Facebook last post end-->
             </div>
             <!-- Video below begin -->
-            <iframe width="100%" height="200" src="https://www.youtube.com/embed/6r1c_DeK3m4" frameborder="0" allowfullscreen></iframe>
-            <!-- Video below end -->
+            <iframe width="100%" height="250" src="http://www.youtube.com/embed/{{ Config::get('tedx.video_2') }}?controls=0&fs=0&iv_load_policy=3&rel=0&showinfo=0&theme=light&autohide=0&disablekb=1" frameborder="0">
+            </iframe>
         </div>
     </div>
 </div>

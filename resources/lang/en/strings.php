@@ -2,6 +2,18 @@
 
 return [
 
+    /*----------------------------------------------
+    *
+    * Aici se gasesc stringurile care sunt traduse.
+    * ATENTIE, in nici un caz nu se traduc si nu se modifica sau editeaza cheile, ci doar valorile din array.
+    * 'cheie' => 'valoare', valorile se afla mereu in dreapta sagetii `=>` !
+    *
+    * Pentru a asocia ce se gaseste aici cu ce se afiseaza pe site, te poti lua dupa chei. Adica acestea au nume
+    * destul de sugestiv.
+    * 
+    ------------------------------------------------*/
+
+
     // Navbar strings
     'home' => 'Home',
     'about' => 'About',
@@ -69,6 +81,7 @@ return [
         'Fabrica de pensule', 
         'Cluj-Napoca', 
         'Strada Henri-Barbusse 59-61',
+        // Adauga cate vrei atata timp cat respecti conventia evidenta si sintaxa unui array PHP
     ],
     'contact_entry_accepted' => 'Formularul a fost inregistrat',
     
@@ -78,6 +91,7 @@ return [
     'left_paragraphs' => [
         'Dorim să premiem inovațiile curajoase care au rolul de a schimba lumea în mai bine sau de a aduce noutăți nebănuite în lumea tehnologiei.',
         'Am creat TEDxEroilor Award, un proiect prin care dorim să evidențiem și să premiem profesioniștii care inovează în domeniul lor de activiate in zona Transilvaniei.',
+        // Adauga cate vrei atata timp cat respecti conventia evidenta si sintaxa unui array PHP
     ],
     'right_banner' => 'View partners',
     'steps_title' => 'Etape',
@@ -88,6 +102,7 @@ return [
         ['date' => '1 - 13 Februarie', 'step' => 'Întâlniri de lucru împreună cu juriul pentru a discuta despre mentorat, dezvoltarea ideilor în afaceri și consilere financiară'],
         ['date' => '13 - 16 Februarie', 'step' => 'Juriul va alege cele mai bune 3 inovații după procesul de mentorat.'],
         ['date' => '20 Februarie', 'step' => 'Anunțarea inovației câștigătoare în cadrul conferinței TEDxEroilor'],
+        // Adauga cate vrei atata timp cat respecti conventia evidenta si sintaxa unui array PHP
     ],
     
     // Partners
