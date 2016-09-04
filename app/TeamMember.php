@@ -4,6 +4,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class TeamMember extends Model {
 
-    protected $table = "teamMembers";
+    protected $table = "team_members";
 
 }

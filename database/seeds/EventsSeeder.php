@@ -24,7 +24,7 @@ class EventsSeeder extends Seeder {
 		for ($i = 0; $i < 20; ++$i) {
             DB::table('events')->insert ([
                 'type' => 'salon',
-                'datetime' => '2016-05-11 13:00:00',
+                'datetime' => '2017-05-11 13:00:00',
                 'name_en' => str_random (10),
                 'name_ro' => str_random (10),
                 'location_en' => str_random (10) . '\\' . str_random(10) . '\\' . str_random(10),

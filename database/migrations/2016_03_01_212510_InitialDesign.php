@@ -61,7 +61,7 @@ class InitialDesign extends Migration {
            
         });
 		
-        Schema::create('teamMembers', function (Blueprint $table) {
+        Schema::create('team_members', function (Blueprint $table) {
 
             $table->increments('id');
 
@@ -111,7 +111,7 @@ class InitialDesign extends Migration {
 
         });
         
-        Schema::create('partnershipTypes', function (Blueprint $table) {
+        Schema::create('partnership_types', function (Blueprint $table) {
 
             $table->increments('id');
             
@@ -134,14 +134,14 @@ class InitialDesign extends Migration {
 
             $table->string('name');
             $table->integer('partnershipType_id')->unsigned()->nullable();
-            $table->foreign('partnershipType_id')->references('id')->on('partnershipTypes')->onDelete('set null');
+            $table->foreign('partnershipType_id')->references('id')->on('partnership_types')->onDelete('set null');
             $table->integer('priority_index')->unsigned();
             
             $table->timestamps();
 
         });
 
-        Schema::create('contactFormEntries', function (Blueprint $table) {
+        Schema::create('contact_form_entries', function (Blueprint $table) {
 
             $table->increments('id');
 
@@ -161,23 +161,16 @@ class InitialDesign extends Migration {
 	 *
 	 * @return void
 	 */
-	public function down()
-	{
+	public function down() {
+
 		Schema::drop('events');
-
-        Schema::drop('teamMembers');
-
+        Schema::drop('team_members');
         Schema::drop('advisers');
-
         Schema::drop('alumni');
-
         Schema::drop('speakers');
-
-        Schema::drop('partnershipTypes');
-
+        Schema::drop('partnership_types');
         Schema::drop('partners');
-
-        Schema::drop('contactFormEntries');
+        Schema::drop('contact_form_entries');
 
 	}
 

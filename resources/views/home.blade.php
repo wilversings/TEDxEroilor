@@ -173,10 +173,10 @@ $(function() {
 
                         <div class="col-md-2 social-fetch-icon-facebook"></div>
                         <div class="col-md-10 social-fetch-head">
-                            {{ $fbDate }} {{ trans("strings.social_media_on") }} Facebook
+                            Facebook
                         </div>
                             <span class="social-fetch-text">
-                                {{ $fbMessage }}
+                                
                             </span>
                          </div>
 

@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class PartnershipType extends Model {
 
-	protected $table = "partnershipTypes";
+	protected $table = "partnership_types";
     
     public function partners () {
         

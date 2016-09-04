@@ -16,7 +16,7 @@ class PartnershipTypesSeeder extends Seeder {
         ];
         
         for ($current_id = 1; $current_id <= 5; ++$current_id) {
-            DB::table('partnershiptypes')->insert ([
+            DB::table('partnership_types')->insert ([
                 'text_size' => 40,
                 'priority_index' => $current_id,
                 'name_en' => $pttypes[$current_id - 1],

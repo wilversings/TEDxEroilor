@@ -33,22 +33,9 @@ class HomeController extends Controller {
 	 * @return Response
 	 */
 	 
-	private static function getFacebookLastPost () {
-		
-		$fbApiUrl = "https://graph.facebook.com/v2.6/" .
-		 			Config::get('tedx.facebook_pagename') .
-					"/feed?limit=1&access_token=" . 
-		  			Config::get('tedx.facebook_token');
-		
-		return json_decode(file_get_contents($fbApiUrl));
-		
-	}
-	 
 	public function home() {
         
-		//return HomeController::getFacebookLastPost();
-		
-		$fbPost = HomeController::getFacebookLastPost();
+		//return HomeController::getFacebookLastPost();	
 		
         $nowDateTime = Carbon::now('Europe/Bucharest');
         $nowTime = $nowDateTime->toTimeString();
@@ -68,9 +55,7 @@ class HomeController extends Controller {
             'date' => $date,
             'daysLeft' => $daysLeft,
             'hoursLeft' => $hoursLeft,
-            'event' => $nextEvent,
-			'fbDate' => Carbon::parse($fbPost->data[0]->created_time)->formatLocalized('%d %B %Y'),
-			'fbMessage' => App\Services\Data::excerpt($fbPost->data[0]->message, Config::get('tedx.facebook_word_excerpt'))
+            'event' => $nextEvent
         ]);
         
 	}
