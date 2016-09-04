@@ -45,7 +45,103 @@ class AdminController extends Controller {
         return view('admin.dashboard');
         
     }
-    
+
+    protected static $allowedEntities = [
+        'Adviser' => App\Adviser::class,
+        'Alumna' => App\Alumna::class,
+        'ContactFormEntry' => App\EvenContactFormEntry::class,
+        'Event' => App\Event::class,
+        'Partner' => App\Partner::class,
+        'PartnershipType' => App\PartnershipType::class,
+        'Speaker' => App\Speaker::class,
+        'TeamMember' => App\TeamMember::class,
+    ];
+
+    public function dispatchGet ($entity) {
+
+        $entityModelClass = AdminController::$allowedEntities[$entity];
+        $id = Input::get('id');
+
+        if (!isset($entityModelClass)) {
+            return false;
+        }
+
+        if (isset($id)) {
+            return $entityModelClass::where('id', $id)->get();
+        }
+        else {
+            return [
+                'data' => $entityModelClass::all()
+            ];
+        }
+
+    }
+
+    public function dispatchPost ($entity, Request $request) {
+
+        $form = $request->all();
+        foreach($form as $name => $data) {
+            if ( // If a certain field is a file
+                gettype($data) == 'object' && 
+                get_class($data) == 'Symfony\Component\HttpFoundation\File\UploadedFile'
+            ) {
+            }
+        }
+
+    }
+
+    public function dispatchDelete ($entity) {
+
+        $entityModelClass = AdminController::$allowedEntities[$entity];
+
+        $warnings = [];
+        $infos = [];
+
+        if (!isset($entityModelClass)) {
+            // TODO Handle this
+        }
+
+        $id = Input::get('id');
+        if (!isset($id)) {
+            return [
+                'errors' => ['There is no id specified for the delete']
+            ];
+        }
+
+        $obj = $entityModelClass->where('id', $id)->first();
+        if ($obj) {
+            // Deleting disk files
+            foreach ($obj as $name => $data) {
+                if (end(explode('_', $name) == "path")) {
+
+                    if (File::exists($data)) {
+                        File::delete($data);
+                    }
+                    else {
+                        array_push($warnings, "File $data doesn't exist");
+                    }
+
+                }
+            }
+            $entityModelClass::destroy($id);
+            array_push($infos, "$entity was deleted successfully!");
+        }
+        else {
+            array_push($warnings, "Specified object was not found in the database");
+        }
+
+        $response = [];
+        if (count($infos)) {
+            $response['infos'] = $infos;
+        }
+        if (count($warnings)) {
+            $response['warnings'] = $warnings;
+        }
+
+        return $response;
+
+    }
+
     /* Contact entries */
     
     public function displayContactEntries () {
